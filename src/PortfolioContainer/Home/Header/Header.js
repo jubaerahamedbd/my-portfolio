@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { TOTAL_SCREENS, GET_SCREEN_INDEX } from '../../../utilities/commonUtlis';
-import ScrollService from '../../../utilities/ScroolService';
+import React, { useState,useEffect } from 'react';
+import { TOTAL_SCREENS, GET_SCREEN_INDEX } from '../../../utilities/commonUtils';
+import ScrollService from '../../../utilities/ScrollService';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Header.css'
@@ -19,21 +19,21 @@ const Header = () => {
     const getHeaderOptions = () => {
         return (
             TOTAL_SCREENS.map((screen, i) => (
-                <div key={screen.screen_name} className={getHeaderOptionsClass(i)}
+                <div key={screen.screen_name} className={getHeaderOptionsClasses(i)}
                     onClick={() => switchScreen(i, screen)}>
                     <span>{screen.screen_name}</span>
                 </div>
             ))
         )
     }
-    const getHeaderOptionsClass = (index) => {
-        let classes = "header-option";
+    const getHeaderOptionsClasses = (index) => {
+        let classes = "header-option ";
         if (index < TOTAL_SCREENS.length - 1)
-            classes += "header-option-seperator";
+            classes += "header-option-seperator ";
 
         if (selectedScreen === index)
-            classes += "selected-header-option";
-        return;
+            classes += "selected-header-option ";
+        return classes;
     }
 
     const switchScreen = (index, screen) => {
@@ -44,7 +44,11 @@ const Header = () => {
         setSelectedScreen(index)
         setShowHeaderOptions(false)
     }
-
+    useEffect(() => {
+        return () => {
+          currentScreenSubscription.unsubscribe();
+        };
+      }, [currentScreenSubscription]);
     return (
         <div
             className="header-container"
@@ -73,6 +77,7 @@ const Header = () => {
         </div>
     );
 }
+
 
 
 export default Header;
