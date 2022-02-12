@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Typical from 'react-typical'
-import axios from "axios";
+import axios from 'axios';
 import { toast } from "react-toastify";
 import imgBack from '../../images/mailz.jpeg'
 import load1 from '../../images/load2.gif'
