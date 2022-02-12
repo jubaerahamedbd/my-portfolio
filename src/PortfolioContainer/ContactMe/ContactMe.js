@@ -140,7 +140,7 @@ const ContactMe = (props) => {
 
             </div>
             <div className='footer'>
-                <p>©️jubaerahamed.me 2022</p>
+                <p>©️jahamed.info 2022</p>
             </div>
         </div>
     );
