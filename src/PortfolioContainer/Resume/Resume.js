@@ -124,7 +124,7 @@ const Resume = (props) => {
                 />
                 <div className="experience-description">
                     <span className="resume-description-text">
-                       - Currently working as freelancer in this marketplace and working with various item like Develope website with HTML,CSS,JavaScript,ReactJs and Wordpress.
+                        - Currently working as freelancer in this marketplace and working with various item like Develope website with HTML,CSS,JavaScript,ReactJs and Wordpress.
                     </span>
                 </div>
                 <ResumeHeading
@@ -138,7 +138,7 @@ const Resume = (props) => {
                         - Great Experiance with them and learn many thing. Mainly worked with front end desigh using html, css and JavaScript. Also work with ReactJs, MongoDB and many other framework and libraries.
                     </span>
                     <br />
-                  
+
                 </div>
             </div>
         </div>,
