@@ -3,6 +3,7 @@ import { TOTAL_SCREENS, GET_SCREEN_INDEX } from '../../../utilities/commonUtils'
 import ScrollService from '../../../utilities/ScrollService';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Logo from '../../../assets/Home/logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -62,7 +63,8 @@ const Header = () => {
                     <FontAwesomeIcon className="header-hmburger-bars" icon={faBars} />
                 </div>
                 <div className="header-logo">
-                    <span>JUBAER~</span>
+                    {/* <span>JUBAER~</span> */}
+                    <img src={Logo} width="150px"/>
                 </div>
                 <div
                     className={

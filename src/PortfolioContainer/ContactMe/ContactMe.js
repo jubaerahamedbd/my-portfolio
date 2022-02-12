@@ -86,6 +86,7 @@ const ContactMe = (props) => {
                                 steps={
                                     [
                                         "Get In Touch 📧", 1000,
+                                        "Send Your Message",1000
                                     ]
                                 }
                             />
